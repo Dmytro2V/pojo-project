@@ -11,8 +11,15 @@ console.log(arrayConverter(["mango", "pineapple"])); // => {mango: 1, pineapple:
 console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {apple: 1, banana: 2, potato: 1}
 ***********************************************************************/
 
-function arrayConverter(array) {
-  // Your code here
+function arrayConverter(array) {  
+  return array.reduce(function(Obj, el) {
+    if (Obj[el] === undefined) {
+      Obj[el] = 1;
+    } else {
+      Obj[el] ++
+    };
+    return Obj;
+  },{})
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

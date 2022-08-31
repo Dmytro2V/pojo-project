@@ -20,7 +20,11 @@ keyInObjectArray(objArray, 'animal'); // => false
 ***********************************************************************/
 
 function keyInObjectArray(objArray, keyString) {
-  // Your code here
+  let  isKey = objArray.reduce(function(answer, obj) {
+    let isInObj = Object.keys(obj).includes(keyString);
+    return answer || isInObj ;
+  }, answer = false);
+  return isKey;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

@@ -10,9 +10,17 @@ let p2 = {firstName: 'Charlie', lastName: 'Brown', age: 9};
 getFullName(p2); // => 'Charlie Brown'
 ***********************************************************************/
 
+function getFullName1(person) {
+  // Your code here
+  let ret = person.firstName + ' ' + person.lastName; 
+  return ret;
+}
 function getFullName(person) {
   // Your code here
+  let {firstName, lastName} = person; 
+  return firstName + ' ' + lastName
 }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = getFullName;

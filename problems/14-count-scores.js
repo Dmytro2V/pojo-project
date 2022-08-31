@@ -28,7 +28,12 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
 function countScores(people) {
-  // Your code here
+  return people.reduce(function(accumObj, obj){
+    let name = obj.name // or destructuring:
+    let score = obj.score // {name, score} = obj;
+    accumObj[name] = (accumObj[name]??0) + score;
+    return accumObj
+  }, {})
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

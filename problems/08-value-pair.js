@@ -10,9 +10,14 @@ valuePair(object1, object2, 'location'); // => [ 'NY', 'SF' ]
 valuePair(object1, object2, 'name'); // => [ 'One', 'Two' ]
 ***********************************************************************/
 
-function valuePair(obj1, obj2, key) {
-  // Your code here
+function valuePair1(obj1, obj2, key) {
+  return [obj1[key], obj2[key]]
 }
+function valuePair(obj1, obj2, key) {
+  let [{[key]: val1}, {[key]: val2}] = [obj1, obj2];  
+  return [val1, val2]
+}
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = valuePair;
